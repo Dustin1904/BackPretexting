@@ -2,12 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/practica2',{
+mongoose.connect(process.env.MONGO_uri,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
