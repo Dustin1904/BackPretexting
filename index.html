@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				font-family: "Segoe UI";
+				margin: 25px;
+			}
+			h1 {
+				font-size: 25px;
+			}
+			.div-mapa {
+				margin-top: 30px;
+				border: solid #f1f1f1 1px;
+				padding: 15px;
+				border-radius: 7px;
+			}
+			.img-mapa {
+				width: 100%;
+				border-radius: 10px;
+			}
+			button {
+				margin: 35px 0px;
+				height: 45px;
+				border: none;
+				border-radius: 10px;
+				background-color: #1877f2;
+				color: white;
+				font-weight: bold;
+				font-size: 17px;
+			}
+			.div-br {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				gap: 15px;
+				margin-bottom: 17px;
+			}
+			.div-br p {
+				margin: 0px;
+			}
+			.div-br p a {
+				color: #1877f2;
+			}
+			footer {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				font-size: 13px;
+				color: #949494;
+
+				border-top: solid #d0d0d0 1px;
+			}
+			.hr-2 {
+				border: solid #949494;
+			}
+			.a-r {
+				color: #1877f2;
+			}
+			li {
+				list-style: none;
+				display: flex;
+				align-items: center;
+			}
+			.div-info img {
+				margin-right: 10px;
+			}
+			ul {
+				padding-left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="/img/logo.png" alt="" class="img-logo" />
+			<hr />
+
+			<h1>
+				Alerta de seguridad: Inicio de sesión cerca de Quito en un dispositivo
+				nuevo
+			</h1>
+		</header>
+		<p>
+			Alguien acaba de iniciar sesión en tu cuenta de Facebook cerca de Quito,
+			Ecuador en Chrome en Windows. Si no fuiste tú, te ayudaremos a realizar
+			unos simples pasos para proteger tu cuenta.
+		</p>
+		<br />
+		<strong>¿Fuiste tú?</strong>
+		<div class="div-mapa">
+			<div>
+				<img src="/img/mapa.png" alt="" class="img-mapa" />
+			</div>
+			<div class="div-info">
+				<ul>
+					<li>
+						<img
+							width="24px"
+							src="https://ci3.googleusercontent.com/meips/ADKq_NZT56iKFSfhnrggsuPCrSUkYBPmls5xdVN4xkge-bcEFwyYEMqnV0j9GBSgt3xFG8yXPqW0l0fvbbF54e26zh3qhu8bUpkT6d34TR5gx_HHMmg=s0-d-e1-ft#https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/uqz0HYvMWqo.png"
+							height="24px"
+							style="border: 0"
+							class="CToWUd"
+							data-bit="iit"
+						/>Quito, Ecuador
+					</li>
+					<li>
+						<img
+							width="24px"
+							src="https://ci3.googleusercontent.com/meips/ADKq_NYC37t6DqS4CJtn_lXMwd7cT9MKcX59K90TVg4X9juUUGyvLNTJ0259RJV911C8bzT9SUB6SelOjjsM29VcHxuhiYFZaXsQ4c6c1iVCFYrcN-Q=s0-d-e1-ft#https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/gDNDkK3bVEA.png"
+							height="24px"
+							style="border: 0"
+							class="CToWUd"
+							data-bit="iit"
+						/>Chrome en Windows
+					</li>
+					<li>
+						<img
+							width="24px"
+							src="https://ci3.googleusercontent.com/meips/ADKq_NaGA7vV_dj4mUIXL-JcEivTpQYn8pv7-LvbhMRKcdpz7fqLiYMZfmZdWWLazYecIzlNdZtdjwg0RqCJ8oG82vqPj130aMH0xSYqu0ca1i2-QdE=s0-d-e1-ft#https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/SAdErb3O185.png"
+							height="24px"
+							style="border: 0"
+							class="CToWUd"
+							data-bit="iit"
+						/>Jueves, 31 de octubre de 2024 a la 1:01 p.m.
+					</li>
+				</ul>
+			</div>
+		</div>
+		<button id="button2">No fui yo</button>
+		<div class="div-br">
+			<p>Si fuiste tú, puedes ignorar este correo electrónico.</p>
+			<p>
+				¿Tienes dudas sobre la autenticidad de este correo electrónico? Visita
+				el servicio de ayuda para confirmarlo:
+				<a>www.facebook.com/help/check-email</a>
+			</p>
+			<p>
+				Para mejorar la seguridad de la cuenta, activamos las alertas de inicio
+				de sesión. Seguiremos notificándote cada vez que tu nombre de usuario y
+				contraseña se usen para iniciar sesión desde un nuevo navegador o
+				dispositivo.
+			</p>
+			<p>Gracias. <br />Seguridad de Facebook</p>
+		</div>
+		<footer>
+			<div>
+				<p>from</p>
+				<img src="/img/meta.png" alt="" />
+			</div>
+			<div>
+				<p>
+					© Facebook. Meta Platforms, Inc., Attention: Community Support, 1 Meta
+					Way, Menlo Park, CA 94025
+				</p>
+				<p>
+					A fin de proteger tu cuenta, no reenvíes este correo electrónico.
+					<a class="a-r">Más información</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+	<script>
+		const button = document.getElementById("button2");
+		button.addEventListener("click", function nombre1() {
+            window.location.href='https://jeseniaisabel231.github.io/practica2/'
+        });
+	</script>
+</html>
