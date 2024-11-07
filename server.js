@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require("dotenv").config();
+const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(cors());
@@ -27,6 +28,18 @@ app.post("/hasSidoHackeado", async ( req , res ) => {
     res.status(201).send("Informacion  guardada");
 });
 
+app.post("/enviarEmail", async (req, res)=>{
+    const { correos } = req.body;
+    try {
+        let trasnsportador = nodemailer.createTransport({service:'gmail', auth:{user:'john.mata@epn.edu.ec', pass:'1234'}})
+        const respuesta = await trasnsportador.sendMail({from:'correooooooooooo', to:correos.join(','), subject:'Acabas de iniciaser '})
+    } catch (error) {
+        
+    } 
+})
+
 app.listen(3000,  () => {
     console.log("Servidor escuchando en el puerto 3000");
 })
+
+
