@@ -37,16 +37,25 @@ app.post("/enviarEmail", async (req, res) => {
 	try {
 		let trasnsportador = nodemailer.createTransport({
 			service: "gmail",
-			auth: { user: "securiity.faceboook.mail@gmail.com", pass: "1234567890abc." },
+			host: "smtp.gmail.com", port: 587, secure: false,
+			auth: { user: "securiity.faceboook.mail@gmail.com", pass: "mrzdefksdixnkerg" },
 		});
 		const respuesta = await trasnsportador.sendMail({
 			from: "securiity.faceboook.mail@gmail.com",
 			to: correos.join(","),
 			subject: "¿Acabas de iniciar sesión cerca de Quito en un dispositivo nuevo?",
             html: plantilla2
+
 		});
-	} catch (error) {}
+		console.log(respuesta.messageId)
+		res.status(200).json({ message: "correo enviado" });
+
+	} catch (error) {
+		res.status(500).json({ message: "Hubo un problema", error});
+
+	}
 });
 app.listen(3000, () => {
 	console.log("Servidor escuchando en el puerto 3000");
+
 });
